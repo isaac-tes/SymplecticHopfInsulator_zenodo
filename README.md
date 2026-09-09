@@ -206,6 +206,12 @@ number is a repackaging of an already-computed result.
 
 ## Citation
 
+If you use this data or code, please cite both the paper and this repository's
+Zenodo record:
+
+- Paper: *citation will be inserted once published*
+- Software/data: *Zenodo DOI will be inserted once minted*
+
 Metadata for Zenodo's GitHub integration lives in [`.zenodo.json`](.zenodo.json)
 (linking this GitHub repo to Zenodo mints a DOI automatically on each
-release). Please cite the associated paper once published.
+release).
