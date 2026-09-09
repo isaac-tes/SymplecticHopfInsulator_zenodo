@@ -1,0 +1,18 @@
+[project]
+name = "symplectichopfinsulator-zenodo"
+version = "1.0.0"
+description = "Data and figure-reproduction scripts for the symplectic Hopf insulator paper (Figs. 1-3)"
+readme = "README.md"
+authors = [
+    { name = "Isaac Tesfaye", email = "i.tesfaye@tu-berlin.de" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "h5py>=3.10",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"

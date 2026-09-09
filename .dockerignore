@@ -1,0 +1,5 @@
+plots/
+.venv/
+__pycache__/
+*.pyc
+.git/

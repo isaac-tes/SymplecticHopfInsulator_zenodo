@@ -1,0 +1,28 @@
+# =============================================================================
+# docker-compose.yml for SymplecticHopfInsulator_zenodo
+# Adapted from a PyWatson-generated scaffold (https://github.com/isaac-tes/pywatson)
+#
+# ONE-LINER REPRODUCTION (after downloading Fig. 3's data from Zenodo into
+# ./data/fig3_chiral_edge/chiral_edge.h5, see README.md):
+#   docker compose run reproduce
+# Figures appear in ./plots/ on the host.
+# =============================================================================
+
+services:
+  reproduce:
+    build: .
+    image: symplectic-hopf-figures:latest
+    volumes:
+      - ./plots:/app/plots
+      - ./data/fig3_chiral_edge:/app/data/fig3_chiral_edge:ro
+
+  shell:
+    build: .
+    image: symplectic-hopf-figures:latest
+    volumes:
+      - ./plots:/app/plots
+      - ./data/fig3_chiral_edge:/app/data/fig3_chiral_edge:ro
+      - ./scripts:/app/scripts
+    entrypoint: ["/bin/bash"]
+    stdin_open: true
+    tty: true

@@ -1,0 +1,72 @@
+# Base font size
+# font.size: 10 #also default value
+font.size: 11
+
+# Figure size
+# figure.figsize:     6.4, 4.8  # figure size in inches (width, height)
+# figure.figsize:     6, 4  # figure size in inches (width, height)
+# figure.figsize: 3.52913, 4 #single column revtex42 width =7.05826/2
+
+# Axes properties
+# axes.labelsize: 10 # x and y labels # default medium
+# axes.titlesize: 10 #default large
+axes.titlesize: large #default large
+# axes.linewidth:     0.8     # edge line width of border
+#lines.markersize: 6 # marker size, in points
+# lines.markersize: 7 # marker size, in points
+#lines.linewidth: 1.5 # line width in points
+# lines.linewidth: 2.5
+
+# Legend and figure titles
+# legend.fontsize: 10 #default medium inherits from font size global
+# figure.titlesize: 10 #default large
+
+## //TODO legend fix -> https://matplotlib.org/stable/users/explain/customizing.html#customizing-with-style-sheets
+
+# Tick labels and directions
+# xtick.labelsize: 10 #medium default
+# ytick.labelsize: 10
+xtick.direction: in
+ytick.direction: in
+
+# Tick sizes (10/3 ≈ 3.33 and 0.6*10/3 ≈ 2.0)
+# xtick.major.size: 3.33 #default 3.5
+# xtick.minor.size: 2.0 
+# ytick.major.size: 3.33 #default 3.5
+# ytick.minor.size: 2.0
+
+# Tick positioning
+xtick.top: True
+ytick.right: True
+
+# Colorbar tick direction settings
+# colorbar.ax.tick_params.direction: out
+# colorbar.ax.tick_params.which: both
+
+# colors cycler
+# axes.prop_cycle: cycler('color', ['1f77b4', 'ff7f0e', '2ca02c', 'd62728', '9467bd', '8c564b', 'e377c2', '7f7f7f', 'bcbd22', '17becf']) # default
+# note color list and linestyle or other cycler must have same length to work, see https://matplotlib.org/stable/users/explain/artists/color_cycle.html
+
+axes.prop_cycle: cycler(color='bgrkymc')
+# axes.prop_cycle: cycler(color='bgrkymc') + cycler(linestyle=['-', '--', '-.',':','-', '--', '-.']) + cycler(marker=['s', 'd','o','^','p','*','X']) 
+
+# colormap
+# image.cmap: viridis
+image.cmap: Blues
+
+# LaTeX packages
+text.usetex : True 
+text.latex.preamble : \usepackage{amsmath} \usepackage{amssymb} \usepackage{bm}
+# Fonts Helvetica
+font.family: sans-serif
+font.sans-serif: Computer Modern Roman
+# mathtext.fontset: dejavusans  # Should be 'dejavusans' (default),
+                               # 'dejavuserif', 'cm' (Computer Modern), 'stix',
+                               # 'stixsans' or 'custom'
+
+axes.formatter.use_mathtext: True # When True, use mathtext for scientific notation.
+
+# set dpi
+figure.dpi: 300
+savefig.dpi: 300
+
