@@ -1,5 +1,9 @@
 # Symplectic Hopf Insulator: figure data and reproduction scripts
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22686506.svg)](https://doi.org/10.5281/zenodo.22686506)
+[![arXiv](https://img.shields.io/badge/arXiv-2609.10541-b31b1b.svg)](https://arxiv.org/abs/2609.10541)
+
+
 Data and self-contained plotting scripts that reproduce Figures 1-3 of the
 paper on the symplectic (bosonic Bogoliubov-de Gennes) Hopf insulator. This
 repository holds only what's needed to regenerate those three published
@@ -18,10 +22,9 @@ Figs. 1-2's data ships directly in this repository. Fig. 3's full,
 untrimmed dataset is about 256MB, over GitHub's 100MB per-file limit, so
 it's hosted as its own file on the Zenodo record for this repository:
 
-- Zenodo DOI: `TODO (fill in after the Zenodo deposit is created)`
+- Zenodo DOI: https://doi.org/10.5281/zenodo.22686506
 - Download `chiral_edge.h5` from that record and place it at
-  `data/fig3_chiral_edge/chiral_edge.h5` in your local checkout (or Docker
-  bind-mount, see below).
+  `data/fig3_chiral_edge/chiral_edge.h5` in your local checkout (or Docker bind-mount, see below).
 
 Figs. 1-2 reproduce with no extra steps; Fig. 3 needs this download first.
 
@@ -209,8 +212,9 @@ number is a repackaging of an already-computed result.
 If you use this data or code, please cite both the paper and this repository's
 Zenodo record:
 
-- Paper: *citation will be inserted once published*
-- Software/data: *Zenodo DOI will be inserted once minted*
+- Paper: I. Tesfaye and G. Palumbo, "Symplectic Hopf Insulator: Delicate Topology in Bosonic Bogoliubov-de Gennes Systems," (2026) [arXiv:2609.10541](http://arxiv.org/abs/2609.10541).
+
+- Software/data: https://doi.org/10.5281/zenodo.22686506
 
 Metadata for Zenodo's GitHub integration lives in [`.zenodo.json`](.zenodo.json)
 (linking this GitHub repo to Zenodo mints a DOI automatically on each
