@@ -1,6 +1,6 @@
 # Symplectic Hopf Insulator: figure data and reproduction scripts
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22686506.svg)](https://doi.org/10.5281/zenodo.22686506)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22686505.svg)](https://doi.org/10.5281/zenodo.22686505)
 [![arXiv](https://img.shields.io/badge/arXiv-2609.10541-b31b1b.svg)](https://arxiv.org/abs/2609.10541)
 
 
@@ -22,8 +22,9 @@ Figs. 1-2's data ships directly in this repository. Fig. 3's full,
 untrimmed dataset is about 256MB, over GitHub's 100MB per-file limit, so
 it's hosted as its own file on the Zenodo record for this repository:
 
-- Zenodo DOI: https://doi.org/10.5281/zenodo.22686506
-- Download `chiral_edge.h5` from that record and place it at
+- Zenodo DOI: https://doi.org/10.5281/zenodo.22686505
+- Download [`chiral_edge.h5`](https://zenodo.org/records/22690629/files/chiral_edge.h5?download=1)
+  (256MB, md5: `05cfb7fb64e0e3101aa1c26723f7e198`) from that record and place it at
   `data/fig3_chiral_edge/chiral_edge.h5` in your local checkout (or Docker bind-mount, see below).
 
 Figs. 1-2 reproduce with no extra steps; Fig. 3 needs this download first.
@@ -65,7 +66,7 @@ For a guarantee independent of any registry or package mirror, this
 repository's Zenodo record also archives the fully built image as a
 `.tar.gz`, separate from the Dockerfile recipe above:
 
-- Docker image archive: `TODO (fill in after upload)`
+- Docker image archive: [`symplectic-hopf-figures-image.tar.gz`](https://zenodo.org/records/22690629/files/symplectic-hopf-figures-image.tar.gz?download=1) (388MB, md5: `58b54e69b618b3af1e528a3bdf29c883`)
 
 Loading that file reproduces the exact image byte-for-byte, with no build
 step and no network access required at all:
