@@ -7,27 +7,26 @@
 Data and self-contained plotting scripts that reproduce Figures 1-3 of the
 paper on the symplectic (bosonic Bogoliubov-de Gennes) Hopf insulator. This
 repository holds only what's needed to regenerate those three published
-figures from already-computed numerical results; it isn't the full research
-codebase.
+figures from already-computed numerical results.
 
 | Figure | Script | Data | What it shows |
 |---|---|---|---|
 | Fig. 1 | `scripts/fig1_hs_spectrum.py` | `data/fig1_hs_spectrum/hs_spectrum.h5` (in repo, 80KB) | BBdG quasiparticle spectrum along a high-symmetry path, for mass parameters $m/J \in \{0.05, 1, 2\}$ and interaction strengths $Un/J \in \{0, 0.2, 0.4\}$ |
 | Fig. 2 | `scripts/fig2_phase_diagram.py` | `data/fig2_phase_diagram/phase_diagram.h5` (in repo, 52KB) | Symplectic Hopf index $\chi$ and minimum BdG gap phase diagram vs. $m$ and $Un$, plus 1D slices |
-| Fig. 3 | `scripts/fig3_chiral_edge.py` | `data/fig3_chiral_edge/chiral_edge.h5` (on Zenodo, ~256MB, see below) | Chiral edge-state spectra and boundary spectral function $A(\mathbf{k}_\parallel,\omega)$ for an open-boundary slab |
+| Fig. 3 | `scripts/fig3_chiral_edge.py` | `data/fig3_chiral_edge/chiral_edge.h5` (on Zenodo, ~268MB, see below) | Chiral edge-state spectra and boundary spectral function $A(\mathbf{k}_\parallel,\omega)$ for an open-boundary slab |
 
 ## Getting Fig. 3's data
 
 Figs. 1-2's data ships directly in this repository. Fig. 3's full,
-untrimmed dataset is about 256MB, over GitHub's 100MB per-file limit, so
+untrimmed dataset is about 268MB, over GitHub's 100MB per-file limit, so
 it's hosted as its own file on the Zenodo record for this repository:
 
 - Zenodo DOI: https://doi.org/10.5281/zenodo.22686505
-- Download [`chiral_edge.h5`](https://zenodo.org/records/22690629/files/chiral_edge.h5?download=1)
-  (256MB, md5: `05cfb7fb64e0e3101aa1c26723f7e198`) from that record and place it at
+- Download [`chiral_edge.h5`](https://zenodo.org/records/22691589/files/chiral_edge.h5?download=1)
+  (268 MB, md5: `05cfb7fb64e0e3101aa1c26723f7e198`) from that record and place it at
   `data/fig3_chiral_edge/chiral_edge.h5` in your local checkout (or Docker bind-mount, see below).
 
-Figs. 1-2 reproduce with no extra steps; Fig. 3 needs this download first.
+Figs. 1-2 reproduce with no extra steps. Fig. 3 needs this download first.
 
 ## Publication styling (LaTeX)
 
@@ -66,7 +65,7 @@ For a guarantee independent of any registry or package mirror, this
 repository's Zenodo record also archives the fully built image as a
 `.tar.gz`, separate from the Dockerfile recipe above:
 
-- Docker image archive: [`symplectic-hopf-figures-image.tar.gz`](https://zenodo.org/records/22690629/files/symplectic-hopf-figures-image.tar.gz?download=1) (388MB, md5: `58b54e69b618b3af1e528a3bdf29c883`)
+- Docker image archive: [`symplectic-hopf-figures-image.tar.gz`](https://zenodo.org/records/22691589/files/symplectic-hopf-figures-image.tar.gz?download=1) (407 MB, md5: `58b54e69b618b3af1e528a3bdf29c883`)
 
 Loading that file reproduces the exact image byte-for-byte, with no build
 step and no network access required at all:
@@ -80,7 +79,7 @@ docker run --rm --network none \
 ```
 
 (`--network none` is only there to demonstrate that no internet access is
-needed once the image is loaded; it isn't required.)
+needed once the image is loaded, it isn't required.)
 
 ## How to reproduce
 
@@ -199,9 +198,7 @@ simulation runs (a full $(m, N, U)$ parameter sweep for Fig. 2, a full
 surface-Brillouin-zone slab diagonalization for Fig. 3, and a one-off
 high-symmetry-path spectrum computation for Fig. 1). Figs. 1-2's files are
 trimmed to exactly the arrays and parameter slices the published figures
-use; Fig. 3's file is kept in full (no trimming), which is why it lives on
-Zenodo rather than in git. No new computation is reintroduced here: every
-number is a repackaging of an already-computed result.
+use. Fig. 3's file is kept in full (no trimming).
 
 ## License
 
