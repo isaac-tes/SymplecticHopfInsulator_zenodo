@@ -212,4 +212,4 @@ Zenodo record:
 
 - Paper: I. Tesfaye and G. Palumbo, "Symplectic Hopf Insulator: Delicate Topology in Bosonic Bogoliubov-de Gennes Systems," (2026) [arXiv:2609.10541](http://arxiv.org/abs/2609.10541).
 
-- Software/data: https://doi.org/10.5281/zenodo.22686506
+- Software/data: https://doi.org/10.5281/zenodo.22686505
